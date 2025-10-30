@@ -1,3 +1,4 @@
+//cRIEI GETTERS E SETTERS PARA OS ARGUMENTOS PRIVADOS 
 class Pokemon {
     #vida = 0;
 
@@ -6,10 +7,16 @@ class Pokemon {
         this.tipo = tipo;
         this.#vida = vidaInicial;
     }
-
-    
     getVida() {
         return this.#vida;
+    }
+
+    setVida(novaVida) {
+      if (novaVida >= 0) {
+      this.#vida = novaVida;
+      }else {
+        console.log("Valor de vida inválido!");
+      }
     }
 
     receberDano(dano) {
@@ -45,20 +52,30 @@ class PokemonFogo extends Pokemon { //HERANÇA DA CLASSE MAE
 }
 
 class PokemonAgua extends Pokemon {
-    #curaBase; 
+  #curaBase; 
 
   constructor(nome, vidaInicial, curaBase) {
-    
     super(nome, "Água", vidaInicial);
     this.#curaBase = curaBase;
   }
 
+  get curaBase() {
+    return this.#curaBase;
+  }
+
+  set curaBase(valor) {
+    if (valor >= 0) {
+      this.#curaBase = valor;
+    } else {
+      console.log("Valor de cura inválido!");
+    }
+  }
+
   atacar(alvo) {
     const dano = 15;
-    
     console.log(`${this.nome} deixou ${alvo.nome} com osmose de tanta água!`);
     alvo.receberDano(dano);
-}
+  }
 
 }
 
