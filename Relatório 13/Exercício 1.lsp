@@ -24,3 +24,15 @@
   (format t "Idade: ~A anos  Peso: ~A kg~%" idade peso)
   (format t "Erva usada: ~A  Dosagem: ~A ml~%" erva dosagem)
   (format t "Preco final: ~A moedas~%" preco-final))
+
+;; caso Ginseng
+(let* ((peso 23)
+       (idade 5)
+       (erva "Ginseng")
+       (preco-base 9)
+       (dosagem (calcula-dosagem peso idade))
+       (preco-final (ajusta-preco preco-base erva)))
+(format t "~%")
+  (format t "Idade: ~A anos  Peso: ~A kg~%" idade peso)
+  (format t "Erva usada: ~A  Dosagem: ~A ml~%" erva dosagem)
+  (format t "Preco final: ~A moedas~%" preco-final))
