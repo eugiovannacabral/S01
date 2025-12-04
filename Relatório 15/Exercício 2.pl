@@ -11,7 +11,7 @@ disciplina(teoria_grafos, 4, matematica).
 disciplina(estatistica, 6, matematica).
 disciplina(sistemas_operacionais, 6, computacao).
 disciplina(projeto_integrador, 10, aplicacoes).
- 
+
 % Fatos: Pré-Requisitos (disciplina_principal, pre_requisito)
 prerequisito(estrutura_dados, programacao1).
 prerequisito(algoritmos, estrutura_dados).
@@ -25,7 +25,7 @@ prerequisito(teoria_grafos, calculo1).
 prerequisito(estatistica, calculo1).
 prerequisito(projeto_integrador, banco_dados).
 prerequisito(projeto_integrador, sistemas_operacionais).
- 
+
 % Fatos: Conhecimento de Alunos (aluno, disciplina_concluida)
 % Configuração de Alunos para testes:
 concluiu(maria, programacao1).
@@ -43,7 +43,7 @@ concluiu(lucas, estrutura_dados).
 concluiu(lucas, algoritmos).
 concluiu(lucas, redes). 
 concluiu(lucas, banco_dados).
- 
+
 alto_impacto(D) :-
     disciplina(D, C, _),
     C > 5,
